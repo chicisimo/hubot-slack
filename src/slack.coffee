@@ -40,7 +40,7 @@ class Slack extends Adapter
     user_name = envelope.user?.name || envelope?.name
 
     strings.forEach (str) =>
-      @send envelope, "#{user_name}: #{str}"
+      @send envelope, "@#{user_name}: #{str}"
 
   topic: (params, strings...) ->
     # TODO: Set the topic
